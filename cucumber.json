@@ -1,0 +1,13 @@
+{
+    "default": {
+        "require": [
+            "steps/*.js",
+            "page/*.js",
+            "utility/*.js"
+        ],
+        "defaultTimeout": 60000,
+        "format": [
+            "html:cucumber-report.html"
+           ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+   "originLocation":{
+    "locName":"my house",
+    "addressLine1":"211th street"
+   },
+   "destination":{
+    "locName":"white house",
+    "addressLine1":"1600 Pennsylvania Avenue Northwest"
+   },
+   "lineItems":{
+      "handlingNo":"2",
+      "length":"44",
+      "width":"33",
+      "height":"55",
+      "weight":"2121",
+      "density":"23"
+   },
+   "basicInformation":{
+      "interalNotes":"These are internal notes",
+      "carrerNotes":"This are notes for the carrier",
+      "referenceNumValue":"CO-ABC"
+   },
+   "quoteDetails":{
+      "linehaul":"500",
+      "fuel":"50",
+      "quoteId":"QABC-123",
+      "days":"6"
+   },
+   "pickUp":{
+      "comment":"It was Picked up"
+   }
+}
