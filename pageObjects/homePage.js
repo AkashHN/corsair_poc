@@ -13,13 +13,13 @@ class HomePage{
 
 
     async selectDomain(){
-        await runAccessibilityTests("Landing Page");
+        runAccessibilityTests("Landing Page");
         await this.searchDomainInput.fill("052");
         await this.selectDropdown.click();
     }
 
     async clickOrder(){
-        await runAccessibilityTests("DashBoard Page");
+        runAccessibilityTests("DashBoard Page");
         await this.orderAnchor.click();
     }
 }
