@@ -3,7 +3,7 @@ require('dotenv').config();
 
 class LogInPage{
     get userNameInput(){
-        return global.page.locator("//input[@id='signInName']");
+        return global.page.locator("//input[@id='signInNam']");
     }
     get userPassword(){
         return global.page.locator("//input[@id='password']");
