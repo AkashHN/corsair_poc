@@ -39,6 +39,6 @@ jobs:
         if: always()
         with:
           name: cucumber-report
-          # path: cucumber-report.html
-          path: playwright-report/index.html
+          path: cucumber-report.html
+          # path: playwright-report/index.html
           retention-days: 30
