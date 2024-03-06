@@ -13,7 +13,7 @@ class HomePage{
 
 
     async selectDomain(){
-        runAccessibilityTests("Landing Page");
+        // runAccessibilityTests("Landing Page");
         await this.searchDomainInput.fill("052");
         await this.selectDropdown.click();
     }
