@@ -1,5 +1,6 @@
 const {expect} = require('@playwright/test');
 require('dotenv').config();
+const runAccessibilityTests = require('../utility/a11y');
 
 class LogInPage{
     get userNameInput(){

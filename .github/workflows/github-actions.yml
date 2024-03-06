@@ -38,7 +38,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: cucumber-report
-          path: cucumber-report.html
-          # path: playwright-report/index.html
+          name: my-reports
+          path: |
+            cucumber-report.html
+            artifacts/
           retention-days: 30

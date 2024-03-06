@@ -1,6 +1,7 @@
 const {expect} = require('@playwright/test');
 require('dotenv').config();
 const{quoteDetails, pickUp}=require("../data/data.json")
+const runAccessibilityTests = require('../utility/a11y');
 
 class OrderDetailsPage{
 
@@ -77,6 +78,7 @@ class OrderDetailsPage{
 
     async addQuoteDetails(){
         await global.page.waitForTimeout(10000);
+        await runAccessibilityTests("Order Details Page");
         await this.addQuote.click();
         await this.lineHaulInput.fill(quoteDetails["linehaul"]);
         await this.fuelInput.fill(quoteDetails["fuel"]);

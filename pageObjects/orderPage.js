@@ -1,6 +1,7 @@
 const {expect} = require('@playwright/test');
 require('dotenv').config();
 const{originLocation, destination, lineItems, basicInformation}=require("../data/data.json")
+const runAccessibilityTests = require('../utility/a11y');
 
 class OrderPage{
 
@@ -127,10 +128,12 @@ class OrderPage{
         return global.page.locator("//td[@aria-label='24']")
     }
     async createOrder(){
+        await runAccessibilityTests("Order Page");
         await this.newOrderBtn.click();
         await this.originLocName.fill(originLocation["locName"]);
         await global.page.waitForTimeout(1000);
         await this.originAddLine1.fill(originLocation["addressLine1"]);
+        await runAccessibilityTests("Create Order Page");
         await global.page.keyboard.press('Enter');
         await this.AddLine1Drop.click();
         await this.destLocName.fill(destination["locName"]);
