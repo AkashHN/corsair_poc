@@ -38,20 +38,15 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: my-reports
-          path: |
-            cucumber-report.html
-            # artifacts/
-          retention-days: 30
-          
-        # Upload the report directory to the `gh-pages` branch
-      - uses: actions/upload-artifact@v3
-        with:
           name: test-reports
-          path: reports/  # Replace with the actual path
+          path: |
+            reports/
+            # artifacts/
+          retention-days: 5
+          
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: test-reports
 
