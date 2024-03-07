@@ -50,10 +50,6 @@ jobs:
           name: test-reports
           path: cucumber-report.html  # Replace with the actual path
 
-      - uses: actions/checkout@v3
-        with:
-          ref: gh-pages  # This will checkout the `gh-pages` branch
-
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -63,11 +59,22 @@ jobs:
         run: |
           mkdir -p published-reports
           cp -r test-reports/* published-reports/
-
-      # Use a suitable action to deploy the report to your `gh-pages` branch
-      - name: Deploy reports to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.7.3  # Example action, replace with your preferred one
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./published-reports
-          keep_files: true  # Keeps previously uploaded reports (optional)
+          # Upload entire repository
+          path: published-reports/
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+      # Use a suitable action to deploy the report to your `gh-pages` branch
+      
+      # - name: Deploy reports to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3.7.3  # Example action, replace with your preferred one
+      #   with:
+      #     publish_dir: ./published-reports
+      #     keep_files: true  # Keeps previously uploaded reports (optional)
