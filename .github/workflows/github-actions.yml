@@ -9,6 +9,8 @@ on:
       - main  # Adjust to your main branch name
   workflow_dispatch:
 permissions:
+  contents: read
+  pages: write
   id-token: write
 jobs:
   test:
@@ -67,7 +69,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v3
         with:
-          artifact_name: test-reports
+          artifact_name: reports
         #   token: ${{ secrets.GITHUB_TOKEN }}
         #   artifact_name: github-pages
         # env:
