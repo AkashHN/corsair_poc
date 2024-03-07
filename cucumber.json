@@ -7,7 +7,7 @@
         ],
         "defaultTimeout": 60000,
         "format": [
-            "html:cucumber-report.html"
+            "html:reports/cucumber-report.html"
            ]
     }
 }
