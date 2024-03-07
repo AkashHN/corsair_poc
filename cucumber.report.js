@@ -9,7 +9,7 @@ const reporter = require('cucumber-html-reporter');
       jsonFile: './cucumber_report.json',
       launchReport: false,
       noInlineScreenshots: false,
-      output: 'cucumber-report.html',
+      output: 'reports/cucumber-report.html',
       reportSuiteAsScenarios: true,
       scenarioTimestamp: true,
       storeScreenshots: true,
@@ -19,10 +19,10 @@ const reporter = require('cucumber-html-reporter');
     // Generate HTML report
     reporter.generate(options);
  
-    console.log('HTML report generated successfully: cucumber-report.html');
+    console.log('HTML report generated successfully: reports/cucumber-report.html');
  
     // Open the generated report in the default browser
-    await open('cucumber-report.html');
+    await open('reports/cucumber-report.html');
   } catch (error) {
     console.error('Error occurred:', error);
   }
