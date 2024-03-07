@@ -1,7 +1,5 @@
-import http from 'k6/http';
-import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
- 
- 
+const {http} = require('k6/http');
+const { htmlReport } = require("https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js");
 const { check, sleep }= require('k6');
 export let options = {
   vus: 10, // Virtual Users
