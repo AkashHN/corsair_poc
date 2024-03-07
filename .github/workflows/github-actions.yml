@@ -43,7 +43,23 @@ jobs:
             cucumber-report.html
             # artifacts/
           retention-days: 30
-
+      - name: Cucumber HTML Report Generator
+        # You may pin to the exact commit or the version.
+        uses: mt185252/cucumber-html-report-generator@v1
+        with:
+          # Theme in which HTML report should be generated
+          # report-theme: # optional, default is hierarchy
+          # Path to the cucmber report in json format.
+          json-file-path: cucumber_report.json
+          # If true, reports total number of passed/failed scenarios as HEADER supported in the Bootstrap theme.
+          report-suite-as-scenarios: true
+          # If true, shows the starting timestamp of each scenario within the title in bootstrap theme
+          scenario-timestamp: true
+          # Metadata to be included in the html report.
+          # report-metadata: # default is {}
+          # A summary report of all failed scenarios will be listed in a grid, which its scenario title, tags, failed step and exception.
+          failed-summary-report: true
+          
         # Upload the report directory to the `gh-pages` branch
       # - uses: actions/upload-artifact@v3
       #   with:
@@ -60,29 +76,29 @@ jobs:
       #     mkdir -p published-reports
       #     cp -r test-reports/* published-reports/
           
-      - name: Setup Pages
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
-        uses: actions/configure-pages@v2
+      # - name: Setup Pages
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }} 
+      #   uses: actions/configure-pages@v2
         
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: artifacts/
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Ensure this token has required permissions
-          emit_telemetry: false
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 5000
-          artifact_name: github-pages
-          preview: false
-        env:
-          GITHUB_PAGES: true
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     # Upload entire repository
+      #     path: artifacts/
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v1
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }} # Ensure this token has required permissions
+      #     emit_telemetry: false
+      #     timeout: 600000
+      #     error_count: 10
+      #     reporting_interval: 5000
+      #     artifact_name: github-pages
+      #     preview: false
+      #   env:
+      #     GITHUB_PAGES: true
 
       # Use a suitable action to deploy the report to your `gh-pages` branch
       
