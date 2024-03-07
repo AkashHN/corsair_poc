@@ -18,7 +18,8 @@ async function runAccessibilityTests(pageName) {
       ,
       options: {
         projectKey: "Corsair", // Replace with your project name
-        reportFileName:reportPath
+        reportFileName:reportPath,
+        outputDir:reports
       },
     });
     let page1 =page
