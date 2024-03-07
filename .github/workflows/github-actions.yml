@@ -66,11 +66,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_name: github-pages
-        env:
-          GITHUB_PAGES: true
+        # with:
+        #   token: ${{ secrets.GITHUB_TOKEN }}
+        #   artifact_name: github-pages
+        # env:
+        #   GITHUB_PAGES: true
 
       # Use a suitable action to deploy the report to your `gh-pages` branch
       
