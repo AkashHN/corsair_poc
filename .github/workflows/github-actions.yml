@@ -44,18 +44,15 @@ jobs:
       #       artifacts/
       #     retention-days: 30
 
-  publish:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Download Cucumber Reports
-        uses: actions/download-artifact@v2
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: cucumber-reports
+          # Upload entire repository
           path: cucumber-report.html
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
-      - name: Publish Cucumber Reports
-        uses: actions/upload-artifact@v2
-        with:
-          name: cucumber-reports
-          path: cucumber-report.html
+  
