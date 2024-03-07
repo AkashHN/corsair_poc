@@ -50,24 +50,26 @@ jobs:
           name: test-reports
           path: cucumber-report.html  # Replace with the actual path
 
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: test-reports
+      # - name: Download artifacts
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: test-reports
 
-      - name: Copy reports to publishing directory
-        run: |
-          mkdir -p published-reports
-          cp -r test-reports/* published-reports/
+      # - name: Copy reports to publishing directory
+      #   run: |
+      #     mkdir -p published-reports
+      #     cp -r test-reports/* published-reports/
           
       - name: Setup Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
         uses: actions/configure-pages@v2
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: published-reports/
+          path: cucumber-report.html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
