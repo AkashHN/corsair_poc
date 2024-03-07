@@ -50,21 +50,18 @@ jobs:
         with:
           name: test-reports
 
-      # - name: Copy reports to publishing directory
-      #   run: |
-      #     mkdir -p published-reports
-      #     cp -r test-reports/* published-reports/
+      - name: Copy reports to publishing directory
+        run: |
+          mkdir -p published-reports
+          cp -r test-reports/* published-reports/
           
-      # - name: Setup Pages
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }} 
-      #   uses: actions/configure-pages@v2
-        
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     # Upload entire repository
-      #     path: artifacts/
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: published-reports/
       # - name: Deploy to GitHub Pages
       #   id: deployment
       #   uses: actions/deploy-pages@v1
