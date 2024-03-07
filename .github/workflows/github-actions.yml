@@ -73,6 +73,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Ensure this token has required permissions
+          emit_telemetry: false
+          timeout: 600000
+          error_count: 10
+          reporting_interval: 5000
+          artifact_name: github-pages
+          preview: false
+        env:
+          GITHUB_PAGES: true
+
       # Use a suitable action to deploy the report to your `gh-pages` branch
       
       # - name: Deploy reports to GitHub Pages
