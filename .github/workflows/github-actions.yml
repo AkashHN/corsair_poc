@@ -37,20 +37,29 @@ jobs:
       - name: Run Playwright tests with xvfb
         run: |
           xvfb-run npm run test
+
+      - name: Run k6 local test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: utility/performancetest.js
+          
       - name: Upload Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: reports/
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          path: |
+            reports/
+            summary.html
+            
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: test
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
       
