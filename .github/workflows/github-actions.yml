@@ -8,6 +8,11 @@ on:
     branches:
       - main  # Adjust to your main branch name
   workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+  
 permissions:
   contents: read
   pages: write
@@ -15,9 +20,6 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -39,46 +41,20 @@ jobs:
       - name: Run Playwright tests with xvfb
         run: |
           xvfb-run npm run test
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Artifacts
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          path: |
-            reports/
-            # artifacts/
-          retention-days: 5
-          
-
-      # - name: Download artifacts
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: test-reports
-
-      # - name: Copy reports to publishing directory
-      #   run: |
-      #     mkdir -p published-reports
-      #     cp -r test-reports/* published-reports/
-          
-      # - name: Deploy report to Github Pages
-      #   if: always()
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     PUBLISH_BRANCH: gh-pages
-      #     PUBLISH_DIR: reports/
+          name: github-pages
+          path: reports/
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: artifact
-          token: ${{ secrets.GITHUB_TOKEN }}
-        # env:
-        #   GITHUB_PAGES: true
-
-      # Use a suitable action to deploy the report to your `gh-pages` branch
       
-      # - name: Deploy reports to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3.7.3  # Example action, replace with your preferred one
-      #   with:
-      #     publish_dir: ./published-reports
-      #     keep_files: true  # Keeps previously uploaded reports (optional)
