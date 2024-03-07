@@ -9,7 +9,7 @@ on:
       - main  # Adjust to your main branch name
   workflow_dispatch:
 permissions:
-  id-token: read|write
+  id-token: write
 jobs:
   test:
     runs-on: ubuntu-latest
