@@ -41,7 +41,7 @@ jobs:
       - name: Run k6 local test
         uses: grafana/k6-action@v0.3.1
         with:
-          filename: utility/performancetest.js
+          filename: utility/performance_test.js
           
       - name: Upload Artifacts
         if: always()
