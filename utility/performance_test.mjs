@@ -1,4 +1,4 @@
-const {http} = require('k6/http');
+const http = require('k6/http');
 const { htmlReport } = require("https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js");
 const { check, sleep }= require('k6');
 export let options = {
