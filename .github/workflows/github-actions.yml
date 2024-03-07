@@ -40,7 +40,7 @@ jobs:
         run: |
           xvfb-run npm run test
 
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         if: always()
         with:
           path: |
@@ -68,9 +68,9 @@ jobs:
       #     PUBLISH_DIR: reports/
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         with:
-          # artifact_name: test-reports
+          artifact_name: artifact
           token: ${{ secrets.GITHUB_TOKEN }}
         # env:
         #   GITHUB_PAGES: true
