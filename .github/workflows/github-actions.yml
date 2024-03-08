@@ -1,5 +1,5 @@
 name: Playwright Tests
-
+ 
 on:
   push:
     branches:
@@ -8,58 +8,122 @@ on:
     branches:
       - main  # Adjust to your main branch name
   workflow_dispatch:
-  
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 jobs:
-  test:
+  UI_Test:
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+ 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '21.4.0'
-
+ 
       - name: Install dependencies
         run: npm install
-        
+       
       - name: Install playwright
         run: npx playwright install
-        
+       
       - name: Install xvfb
         run: sudo apt-get install xvfb
-
+ 
       - name: Run Playwright tests with xvfb
         run: |
-          xvfb-run npm run test
-
-      - name: Run k6 local test
-        uses: grafana/k6-action@v0.3.1
-        with:
-          filename: utility/performance_test.mjs
-          
+          xvfb-run npm run ui_test
+         
       - name: Upload Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages
-          path: |
-            reports/
-            summary.html
-            
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: test
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
-      
+          name: json
+          path: reports/json
+  A11y_Test:
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21.4.0'
+ 
+      - name: Install dependencies
+        run: npm install
+       
+      - name: Install playwright
+        run: npx playwright install
+       
+      - name: Install xvfb
+        run: sudo apt-get install xvfb
+ 
+      - name: Run Playwright tests with xvfb
+        run: |
+          xvfb-run npm run a11y_test
+         
+      - name: Upload Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Accesbility_Report
+          path: reports/a11y
+  k6_Test:
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21.4.0'
+ 
+      - name: Install dependencies
+        run: npm install
+ 
+      - name: Run k6 local test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: utility/performance_test.mjs
+         
+      - name: Upload Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Perforamance_Report
+          path: reports
+  generate:
+    needs: [UI_Test]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: git chechout
+        uses: actions/checkout@v4
+      - name: SetUp NodeJs -20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.11.0
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: json
+          path: ./report
+      - run: ls -lrt
+      - name: Install
+        run: npm install
+      - run: |
+          mkdir reports/json
+          mv -v report/*.json ./reports/json/report.json
+          npm run genarate_report
+      - name: Final Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cucumber-Report
+          path: reports
+ 

@@ -11,9 +11,6 @@ export let options = {
  
 export default async function performanceTest() {
   // GET request
- 
- 
- 
   const response = http.get('https://qa.rygen.com/corsair/');
   // Check status code and response time
   check(response, { 'status is 200': (r) => r.status === 200 });

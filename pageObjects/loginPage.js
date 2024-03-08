@@ -25,8 +25,6 @@ class LogInPage{
     }
     
     async loginUser(userName, password){
-        console.log("1-----------------------------------");
-        await expect(this.companyLogoImg).toBeVisible(); 
         await this.userNameInput.fill(userName);
         await this.continueBtn.click();
         await expect(this.companyLogoImg).toBeVisible(); 

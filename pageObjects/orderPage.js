@@ -128,12 +128,10 @@ class OrderPage{
         return global.page.locator("//td[@aria-label='24']")
     }
     async createOrder(){
-        await runAccessibilityTests("Order Page");
         await this.newOrderBtn.click();
         await this.originLocName.fill(originLocation["locName"]);
         await global.page.waitForTimeout(1000);
         await this.originAddLine1.fill(originLocation["addressLine1"]);
-        await runAccessibilityTests("Create Order Page");
         await global.page.keyboard.press('Enter');
         await this.AddLine1Drop.click();
         await this.destLocName.fill(destination["locName"]);
@@ -144,7 +142,7 @@ class OrderPage{
         await expect(this.pickupDate).toBeVisible()
         await this.pickupDate.click();
         await global.page.waitForTimeout(1000);
-        await expect(this.selectDate).toBeVisible()
+        await expect(this.selectDate).toBeVisible();
         await this.selectDate.click();
         await this.billAddressBook.click();
         await this.billAddressModel.click();
@@ -156,7 +154,7 @@ class OrderPage{
         await this.selectClass.click();
         await this.getSelectDirection.click();
         await global.page.waitForTimeout(1000);
-        await expect(this.selectDirection).toBeVisible()
+        await expect(this.selectDirection).toBeVisible();
         await this.selectDirection.click();
         await this.getBillingTerms.click();
         await global.page.waitForTimeout(1000);

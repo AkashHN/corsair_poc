@@ -5,7 +5,6 @@
             "page/*.js",
             "utility/*.js"
         ],
-        "defaultTimeout": 60000,
         "format": [
             "html:reports/cucumber-report.html"
            ]

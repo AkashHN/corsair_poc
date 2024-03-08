@@ -1,6 +1,6 @@
 Feature: Order Feature 
 
-    Scenario Outline: (001) As a user I can create order with the Corsair application
+    Scenario Outline: As a user I can create order with the Corsair application
         Given I am on the Corsair Login page
         When I am Logging into Corsair application with <u_name> and <u_password>
         Then I am Selecting the Domain
@@ -12,4 +12,15 @@ Feature: Order Feature
         Then I am Clicking Add Delivery Button 
         Examples:
             | u_name          | u_password   |
-            | Wolfie          | aiOn8cylbF   | 
+            | Wolfie          | **********   | 
+
+    Scenario: Creating a negative Test Scenerio
+        Given I am on the Corsair Login page
+        When I am Logging into Corsair application with <u_name> and <u_password>
+        Then I am Selecting the Domain
+        Then I am Creating the New Order
+        Examples:
+            | u_name          | u_password   |
+            | Wolfie          | **********   | 
+
+

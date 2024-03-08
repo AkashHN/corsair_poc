@@ -1,4 +1,4 @@
-const runAccessibilityTests = require('../utility/a11y');
+
 class HomePage{
     get searchDomainInput(){
         return global.page.locator("//input[@placeholder='Search Domains']");
@@ -11,15 +11,12 @@ class HomePage{
         return global.page.locator("//span[text()='Order']/parent::a");
     }
 
-
     async selectDomain(){
-        // runAccessibilityTests("Landing Page");
         await this.searchDomainInput.fill("052");
         await this.selectDropdown.click();
     }
 
     async clickOrder(){
-        runAccessibilityTests("DashBoard Page");
         await this.orderAnchor.click();
     }
 }

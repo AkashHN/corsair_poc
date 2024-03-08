@@ -6,7 +6,7 @@ const reporter = require('cucumber-html-reporter');
     const open = openModule.default;
  
     const options = {
-      jsonFile: './cucumber_report.json',
+      jsonFile: './reports/json/cucumber_report.json',
       launchReport: false,
       noInlineScreenshots: false,
       output: 'reports/cucumber-report.html',

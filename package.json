@@ -4,8 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "npx cucumber-js  features/corsir.feature --require  ./steps/*.js -f json:cucumber_report.json --publish",
-        "newTest": "npx cucumber-js features/corsir.feature --require ./steps/*.js -f json:cucumber_report.json & node cucumber.report.js"
+        "ui_test": "npx cucumber-js  features/corsir.feature --require  ./steps/order.step.js -f json:cucumber_report.json",
+        "a11y_test": "npx cucumber-js features/accessibility.feature --require ./steps/accessibility.step.js",
+        "k6_test":"k6 run utility/performance_test.mjs",
+        "generate_report":"node cucumber.report.js"
     },
     "keywords": [],
     "author": "",
@@ -16,7 +18,7 @@
       "@axe-core/playwright": "^4.8.5",
       "@cucumber/pretty-formatter": "^1.0.0",
       "@playwright/test": "^1.42.1",
-      "cucumber-html-reporter": "^5.5.1",
+      "cucumber-html-reporter": "^7.1.1",
       "@types/node": "^20.11.24",
       "playwright": "^1.42.1"
     },

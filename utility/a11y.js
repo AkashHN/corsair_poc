@@ -9,17 +9,16 @@ async function runAccessibilityTests(pageName) {
     await page.goto(url);
     const accessibilityScanResults = await new AxeBuilder( {page} ).analyze();
 
-    // const timestamp = Date.now();
-    const reportPath = `${pageName}.html`;
+    const reportPath = `a11y_${pageName}.html`;
 
     createHtmlReport({
       results: 
         accessibilityScanResults
       ,
       options: {
-        projectKey: "Corsair", // Replace with your project name
+        projectKey: "Corsair",
         reportFileName:reportPath,
-        outputDir:"reports"
+        outputDir:"reports/a11y"
       },
     });
     let page1 =page

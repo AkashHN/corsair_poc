@@ -78,7 +78,6 @@ class OrderDetailsPage{
 
     async addQuoteDetails(){
         await global.page.waitForTimeout(10000);
-        await runAccessibilityTests("Order Details Page");
         await this.addQuote.click();
         await this.lineHaulInput.fill(quoteDetails["linehaul"]);
         await this.fuelInput.fill(quoteDetails["fuel"]);
