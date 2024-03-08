@@ -118,7 +118,7 @@ jobs:
         run: npm install
       - run: |
           mkdir reports/json
-          mv -v report/*.json ./reports/json/report.json
+          mv -v report/*.json ./reports/json/cucumber_report.json
           npm run genarate_report
       - name: Final Report
         if: always()
