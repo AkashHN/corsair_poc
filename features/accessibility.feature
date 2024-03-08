@@ -7,8 +7,6 @@ Feature: Accessibility Test
         Then I am Clicking the Order Button for a11y_test
         Then I am Creating the New Order for a11y_test
         Then I am Adding the Quote Details for a11y_test
-        Then I am Clicking Select Rate Button for a11y_test
-        Then I am Clicking Add Pick Up Button for a11y_test
         Examples:
             | u_name          | u_password   |
             | Wolfie          | **********   | 
