@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <style>
+            .violationCard {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .violationCardLine {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+            }
+            .learnMore {
+                margin-bottom: 0.75rem;
+                white-space: nowrap;
+                color: #2557a7;
+            }
+            .card-link {
+                color: #2557a7;
+            }
+            .violationNode {
+                font-size: 0.75rem;
+            }
+            .wrapBreakWord {
+                word-break: break-word;
+            }
+            .summary {
+                font-size: 1rem;
+            }
+            .summarySection {
+                margin: 0.5rem 0;
+            }
+            .hljs {
+                white-space: pre-wrap;
+                width: 100%;
+                background: #f0f0f0;
+            }
+            p {
+                margin-top: 0.3rem;
+            }
+            li {
+                line-height: 1.618;
+            }
+        </style>
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/stackoverflow-light.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <link
+            rel="icon"
+            href="https://www.deque.com/wp-content/uploads/2018/03/cropped-DQ_SecondaryLogo_HeroBlue_RGB-1-32x32.png"
+            sizes="32x32"
+        />
+        <title>AXE Accessibility Results</title>
+    </head>
+    <body>
+        <div style="padding: 2rem">
+            <h3>
+                AXE Accessibility Results for Corsair project
+            </h3>
+            <div class="summarySection">
+                <div class="summary">
+                    Page URL:
+                    <a href="https:&#x2F;&#x2F;qa.rygen.com&#x2F;corsair&#x2F;order&#x2F;39167" target="_blank" class="card-link">https:&#x2F;&#x2F;qa.rygen.com&#x2F;corsair&#x2F;order&#x2F;39167</a>
+                    <br />
+                </div>
+            </div>
+            <h5>axe-core found <span class="badge badge-warning">68</span> violations</h5>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">#</th>
+                        <th style="width: 45%">Description</th>
+                        <th style="width: 15%">Axe rule ID</th>
+                        <th style="width: 23%">WCAG</th>
+                        <th style="width: 7%">Impact</th>
+                        <th style="width: 5%">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><a href="#1" class="card-link">1</a></th>
+                        <td>ARIA hidden element must not be focusable or contain focusable elements</td>
+                        <td>aria-hidden-focus</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                        <td>serious</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#2" class="card-link">2</a></th>
+                        <td>ARIA attributes must conform to valid names</td>
+                        <td>aria-valid-attr</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                        <td>critical</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#3" class="card-link">3</a></th>
+                        <td>Buttons must have discernible text</td>
+                        <td>button-name</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                        <td>critical</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#4" class="card-link">4</a></th>
+                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                        <td>color-contrast</td>
+                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                        <td>serious</td>
+                        <td>52</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#5" class="card-link">5</a></th>
+                        <td>Table header text should not be empty</td>
+                        <td>empty-table-header</td>
+                        <td>Best practice</td>
+                        <td>minor</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#6" class="card-link">6</a></th>
+                        <td>Images must have alternate text</td>
+                        <td>image-alt</td>
+                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                        <td>critical</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#7" class="card-link">7</a></th>
+                        <td>Form elements must have labels</td>
+                        <td>label</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                        <td>critical</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Failed</h3>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="1">1.</a> ARIA hidden element must not be focusable or contain focusable elements
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;aria-hidden-focus?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">aria-hidden-focus</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 4.1.2
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures aria-hidden elements are not focusable nor contain focusable elements</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.name-role-value </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT6.a </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.4.1.2 </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.content-toolbar</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;content-toolbar fixed bottom-0 right-0 flex justify-content-center align-items-end&quot; aria-hidden&#x3D;&quot;true&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix all of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Focusable content should be disabled or be removed from the DOM</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="2">2.</a> ARIA attributes must conform to valid names
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;aria-valid-attr?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">aria-valid-attr</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 4.1.2
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures attributes that begin with aria- are valid ARIA attributes</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.aria </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.4.1.2 </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">a[href$&#x3D;&quot;corsair&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;&#x2F;corsair&quot; class&#x3D;&quot;nav-link p-component p-button p-button-text&quot; target&#x3D;&quot;_self&quot; aria-current-value&#x3D;&quot;page&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Invalid ARIA attribute name: aria-current-value</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">a[href$&#x3D;&quot;lightning&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;&#x2F;lightning&quot; class&#x3D;&quot;nav-link p-component p-button p-button-text&quot; target&#x3D;&quot;_self&quot; aria-current-value&#x3D;&quot;page&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Invalid ARIA attribute name: aria-current-value</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">a[href$&#x3D;&quot;billing&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;&#x2F;billing&quot; class&#x3D;&quot;nav-link p-component p-button p-button-text&quot; target&#x3D;&quot;_self&quot; aria-current-value&#x3D;&quot;page&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Invalid ARIA attribute name: aria-current-value</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">a[href$&#x3D;&quot;ficon&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;&#x2F;ficon&quot; class&#x3D;&quot;nav-link p-component p-button p-button-text&quot; target&#x3D;&quot;_self&quot; aria-current-value&#x3D;&quot;page&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Invalid ARIA attribute name: aria-current-value</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">a[href$&#x3D;&quot;docs.rygen.com&#x2F;&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;docs.rygen.com&#x2F;&quot; class&#x3D;&quot;nav-link p-component p-button p-button-text&quot; target&#x3D;&quot;_blank&quot; aria-current-value&#x3D;&quot;page&quot;&gt;&lt;!----&gt;&lt;span class&#x3D;&quot;nav-link-label&quot;&gt;Help &amp;amp; Support&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Invalid ARIA attribute name: aria-current-value</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="3">3.</a> Buttons must have discernible text
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;button-name?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">button-name</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 4.1.2
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures buttons have discernible text</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.name-role-value </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.a </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT6.a </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.4.1.2 </span>
+
+                            <span class="badge bg-light text-dark"> ACT </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-controls&#x3D;&quot;pv_id_14_overlay&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;button data-v-15738044&#x3D;&quot;&quot; class&#x3D;&quot;p-button p-component p-button-icon-only p-splitbutton-menubutton&quot; type&#x3D;&quot;button&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;pv_id_14_overlay&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have inner text that is visible to screen readers</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-controls&#x3D;&quot;pv_id_20_overlay&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;button data-v-15738044&#x3D;&quot;&quot; class&#x3D;&quot;p-button p-component p-button-icon-only p-splitbutton-menubutton&quot; type&#x3D;&quot;button&quot; aria-haspopup&#x3D;&quot;true&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;pv_id_20_overlay&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have inner text that is visible to screen readers</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="4">4.</a> Elements must meet minimum color contrast ratio thresholds
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;color-contrast?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">color-contrast</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level AA, WCAG 1.4.3
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            serious
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.color </span>
+
+                            <span class="badge bg-light text-dark"> wcag2aa </span>
+
+                            <span class="badge bg-light text-dark"> wcag143 </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT13.c </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.1.4.3 </span>
+
+                            <span class="badge bg-light text-dark"> ACT </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.topbar-domain &gt; .rygen-button-tertiary.p-button-text.rygen-button &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Change Domain&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">header</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.back-button</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;a href&#x3D;&quot;&#x2F;corsair&#x2F;order&#x2F;list&quot; class&#x3D;&quot;back-button p-component p-button p-button-text p-button-sm pl-0&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 3.65 (foreground color: #3182ce, background color: #f3f4f6, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.rygen-button-secondary.p-button-outlined.with-icon &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Tag&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 3.65 (foreground color: #3182ce, background color: #f3f4f6, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.action-button-primary.rygen-button-primary.rygen-button &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Consolidate Orders&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #ffffff, background color: #3182ce, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.action-button-primary.rygen-button-primary.rygen-button</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.order-detail-header-cell:nth-child(1) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Order Id&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.order-detail-header-cell.text-center &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Carrier&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.order-detail-header-cell.highlight-on-dirty:nth-child(3) &gt; .popup-dropdown.popup-inputgroup.cursor-pointer &gt; .popup-dropdown-placeholder.p-0.justify-content-evenly &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Direction&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.order-detail-header-cell.highlight-on-dirty:nth-child(4) &gt; .popup-dropdown.popup-inputgroup.cursor-pointer &gt; .popup-dropdown-placeholder.p-0.justify-content-evenly &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Billing Terms&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">div[show-clear&#x3D;&quot;&quot;] &gt; .popup-dropdown-placeholder.p-0.justify-content-evenly &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Equipment Type&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.expand-button &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;More Details&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.origin &gt; .location-section-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;location-section-label&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__address-line</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;named-address__address-line&quot;&gt;211th Street&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__zone-information &gt; .named-address__zone-city-state</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-city-state&quot;&gt;Chicago Heights, IL&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__zone-information &gt; .named-address__zone-postal-code</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-postal-code&quot;&gt;60411&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-origin</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.destination &gt; .location-section-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;location-section-label&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__address-line</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;named-address__address-line&quot;&gt;1600 Pennsylvania Avenue Northwest&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__zone-information &gt; .named-address__zone-city-state</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-city-state&quot;&gt;Washington, DC&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination &gt; .p-card-body &gt; .p-card-content &gt; .named-address.relative.cursor-pointer &gt; .named-address__zone-information &gt; .named-address__zone-postal-code</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-postal-code&quot;&gt;20500&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-locations-destination</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.p-splitbutton-defaultbutton &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Quote&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.chip-button.not-selected.chip-button-secondary:nth-child(1) &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Standard (1)&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.chip-button.not-selected.chip-button-secondary:nth-child(2) &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Volume (Guaranteed) (1)&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.chip-button.not-selected.chip-button-secondary:nth-child(3) &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Volume (Standard) (1)&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Edit Spot Quote&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Spot Quote&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1) &gt; .price-column.text-right.w-full &gt; .price-column-content.justify-content-end.align-items-center &gt; .text-success.font-medium</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;text-success font-medium&quot;&gt;$550.00&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.36 (foreground color: #2b8a40, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1) &gt; .select-rate-column &gt; .rygen-button-secondary.p-button-outlined[aria-hidden&#x3D;&quot;false&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Select Rate&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2) &gt; .w-1:nth-child(3) &gt; .sub-heading.text-gray-darker</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;text-gray-darker sub-heading&quot;&gt;Guaranteed By Am (noon)&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2) &gt; .source-column &gt; .with-icon.rygen-button-tertiary[aria-label&#x3D;&quot;Edit Quote&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Capacity Provider&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2) &gt; .price-column.text-right.w-full &gt; .price-column-content.justify-content-end.align-items-center &gt; .text-success.font-medium</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;text-success font-medium&quot;&gt;$2,210.04&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.36 (foreground color: #2b8a40, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2) &gt; .select-rate-column &gt; .rygen-button-secondary.p-button-outlined[aria-hidden&#x3D;&quot;false&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Select Rate&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3) &gt; .w-1:nth-child(3) &gt; .sub-heading.text-gray-darker</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;text-gray-darker sub-heading&quot;&gt;Standard Rate&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3) &gt; .source-column &gt; .with-icon.rygen-button-tertiary[aria-label&#x3D;&quot;Edit Quote&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Capacity Provider&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3) &gt; .price-column.text-right.w-full &gt; .price-column-content.justify-content-end.align-items-center &gt; .text-success.font-medium</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;text-success font-medium&quot;&gt;$2,210.04&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.36 (foreground color: #2b8a40, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>33</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3) &gt; .select-rate-column &gt; .rygen-button-secondary.p-button-outlined[aria-hidden&#x3D;&quot;false&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Select Rate&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3)</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.col:nth-child(1) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Total Packaging Units&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.line-item-summary-card</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>35</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.col.justify-content-evenly.align-items-center:nth-child(2) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Total Handling Units&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.line-item-summary-card</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.col.justify-content-evenly.align-items-center:nth-child(3) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Total Weight&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.line-item-summary-card</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>37</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.col.justify-content-evenly.align-items-center:nth-child(4) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Linear Feet&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.line-item-summary-card</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.col.justify-content-evenly.align-items-center:nth-child(5) &gt; .juicy.text-center.key-value-pair &gt; .key-value-pair-label &gt; .label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;label&quot;&gt;Cubic Feet&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">.line-item-summary-card</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>39</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Add Line Item&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Line Item&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">div &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Add Reference Number&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Reference Number&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>41</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Add GL Code&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add GL Code&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Add Accessorial&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Accessorial&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>43</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.relative.cursor-pointer &gt; .named-address.cursor-pointer.highlight-on-dirty &gt; .named-address__address-line</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;named-address__address-line&quot;&gt;P.O. Box 398&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.relative.cursor-pointer &gt; .named-address.cursor-pointer.highlight-on-dirty &gt; .named-address__zone-information &gt; .named-address__zone-city-state</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-city-state&quot;&gt;North Little Rock, AR&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>45</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.relative.cursor-pointer &gt; .named-address.cursor-pointer.highlight-on-dirty &gt; .named-address__zone-information &gt; .named-address__zone-postal-code</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;named-address__zone-postal-code&quot;&gt;72115&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.88 (foreground color: #8b99b0, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-documents-drop-target &gt; p</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;p&gt;Drag your file(s) here&lt;&#x2F;p&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.76 (foreground color: #8b99b0, background color: #fafafd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-documents-drop-target</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>47</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Add Document&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Add Document&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #3182ce, background color: #ffffff, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">aside &gt; .no-pad.p-card.p-component</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.audit-line</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;audit-line flex flex-gap-1 justify-content-center align-items-center w-full text-gray-darker&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.62 (foreground color: #8b99b0, background color: #f3f4f6, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>49</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.audit-line &gt; span:nth-child(1)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span&gt;Last Edited by Wolfie&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.62 (foreground color: #8b99b0, background color: #f3f4f6, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.audit-line &gt; span:nth-child(2)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span&gt;Mar 8, 2024, 07:03 PM&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 2.62 (foreground color: #8b99b0, background color: #f3f4f6, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>51</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.audit-line &gt; .rygen-button-tertiary.p-button-text.rygen-button &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;View Full Log&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 3.65 (foreground color: #3182ce, background color: #f3f4f6, font size: 9.2pt (12.25px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">main</code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Save Changes&quot;] &gt; .p-button-label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;p-button-label&quot;&gt;Save Changes&lt;&#x2F;span&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element has insufficient color contrast of 4.02 (foreground color: #ffffff, background color: #3182ce, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Related node:</strong></p>
+                                        <pre><code class="css text-wrap">button[aria-label&#x3D;&quot;Save Changes&quot;]</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="5">5.</a> Table header text should not be empty
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;empty-table-header?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">empty-table-header</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Best practice
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures table headers have discernible text</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            minor
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.name-role-value </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">thead &gt; tr &gt; .select-rate-column</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;th class&#x3D;&quot;select-rate-column&quot; role&#x3D;&quot;columnheader&quot;&gt;&lt;!----&gt;&lt;div class&#x3D;&quot;p-column-header-content&quot;&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;&#x2F;div&gt;&lt;&#x2F;th&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have text that is visible to screen readers</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">th:nth-child(8)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;th class&#x3D;&quot;&quot; role&#x3D;&quot;columnheader&quot; style&#x3D;&quot;width: 3rem; min-width: 3rem;&quot;&gt;&lt;!----&gt;&lt;div class&#x3D;&quot;p-column-header-content&quot;&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;&#x2F;div&gt;&lt;&#x2F;th&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have text that is visible to screen readers</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="6">6.</a> Images must have alternate text
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;image-alt?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">image-alt</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 1.1.1
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures &lt;img&gt; elements have alternate text or a role of none or presentation</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.text-alternatives </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag111 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.a </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT7.a </span>
+
+                            <span class="badge bg-light text-dark"> TT7.b </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.1.1.1 </span>
+
+                            <span class="badge bg-light text-dark"> ACT </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(1) &gt; .carrier-column &gt; .carrier-column-content.overflow-x-hidden.flex-gap-1 &gt; .p-avatar-image.carrier-logo.p-avatar-lg &gt; img</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;rygen-ficon-qa&#x2F;domain-branding&#x2F;64ee4b98-c375-4b23-93e0-bf41d4aa8359.png?X-Goog-Algorithm&#x3D;GOOG4-RSA-SHA256&amp;amp;X-Goog-Credential&#x3D;corsair%40rygen-non-prod.iam.gserviceaccount.com%2F20240308%2Fauto%2Fstorage%2Fgoog4_request&amp;amp;X-Goog-Date&#x3D;20240308T133333Z&amp;amp;X-Goog-Expires&#x3D;86400&amp;amp;X-Goog-SignedHeaders&#x3D;host&amp;amp;X-Goog-Signature&#x3D;82a365f8c7aad9ae6446daa090a08a01f15a17f069a41976f69c4075c3b031300ea742ef2eabfefe288528a3237274520ecd866470497326f879f9e75456ec84f76757993dd9b7a1ef013449ab1c4f576c95a574bd8a0debc66704c389ccc0786a49b8fd58475e153bf9f2eacd6a8c5e86427598a3ac3ff07ffbc987feb25e37600435e786bc29120bb2e6ad9432ba1aa285c1f9b9fd5a8e2b68793a2204744fd80baa38c143c773a29904f5fdda8100038cd3589ea94d3483d1a5a63fd5d30411c7ef610170a82bbe824907ee876619409832eaeace88af1297f15620dd9a653374539d0e8d7ec637d372688e2ccf046cc4277b70cfba89f2f8f0fd4c0cf77a&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have an alt attribute</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(2) &gt; .carrier-column &gt; .carrier-column-content.overflow-x-hidden.flex-gap-1 &gt; .p-avatar-image.carrier-logo.p-avatar-lg &gt; img</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;rygen-ficon-qa&#x2F;domain-branding&#x2F;ae6941a4-f1c7-41ae-a3e3-de702b8c6c45.png?X-Goog-Algorithm&#x3D;GOOG4-RSA-SHA256&amp;amp;X-Goog-Credential&#x3D;corsair%40rygen-non-prod.iam.gserviceaccount.com%2F20240308%2Fauto%2Fstorage%2Fgoog4_request&amp;amp;X-Goog-Date&#x3D;20240308T133333Z&amp;amp;X-Goog-Expires&#x3D;86400&amp;amp;X-Goog-SignedHeaders&#x3D;host&amp;amp;X-Goog-Signature&#x3D;32dcd2632641f6e03626b288fd8cfac41631d765bb1c645343c2ee0236e7f7a20b069bc30d85e0d63670daa2135bea81b993cddf565ca7ac9514d40adb231f1548cdd6ac2c2feabd621048136f7868e234550ed1fab5db08aef964fb9c6930f0e593fa9f0f43ebc8954de1698820c406d473bb01e8a1742164dd10cc809fa7aafc725664ae87ad8cc691d170bc72f3d178cca140e006c41cc3f721c45d73d73d5e66ac3cc6cacfd87005402798ea39581ffd90e429de290a096fcad5e359096d6084d8f747a9ca0236233a6b2f3f23f4e5a1cf6b97a4935b2731a1b61da6f8d94a9b6c0eec5d77c09909eeb6d69f31dfe66de649198d661a8c35035a4180eff4&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have an alt attribute</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.datatable-row:nth-child(3) &gt; .carrier-column &gt; .carrier-column-content.overflow-x-hidden.flex-gap-1 &gt; .p-avatar-image.carrier-logo.p-avatar-lg &gt; img</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;rygen-ficon-qa&#x2F;domain-branding&#x2F;ae6941a4-f1c7-41ae-a3e3-de702b8c6c45.png?X-Goog-Algorithm&#x3D;GOOG4-RSA-SHA256&amp;amp;X-Goog-Credential&#x3D;corsair%40rygen-non-prod.iam.gserviceaccount.com%2F20240308%2Fauto%2Fstorage%2Fgoog4_request&amp;amp;X-Goog-Date&#x3D;20240308T133333Z&amp;amp;X-Goog-Expires&#x3D;86400&amp;amp;X-Goog-SignedHeaders&#x3D;host&amp;amp;X-Goog-Signature&#x3D;32dcd2632641f6e03626b288fd8cfac41631d765bb1c645343c2ee0236e7f7a20b069bc30d85e0d63670daa2135bea81b993cddf565ca7ac9514d40adb231f1548cdd6ac2c2feabd621048136f7868e234550ed1fab5db08aef964fb9c6930f0e593fa9f0f43ebc8954de1698820c406d473bb01e8a1742164dd10cc809fa7aafc725664ae87ad8cc691d170bc72f3d178cca140e006c41cc3f721c45d73d73d5e66ac3cc6cacfd87005402798ea39581ffd90e429de290a096fcad5e359096d6084d8f747a9ca0236233a6b2f3f23f4e5a1cf6b97a4935b2731a1b61da6f8d94a9b6c0eec5d77c09909eeb6d69f31dfe66de649198d661a8c35035a4180eff4&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element does not have an alt attribute</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="7">7.</a> Form elements must have labels
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;label?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">label</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 4.1.2
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures every form element has a label</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            critical
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.forms </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag412 </span>
+
+                            <span class="badge bg-light text-dark"> section508 </span>
+
+                            <span class="badge bg-light text-dark"> section508.22.n </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT5.c </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.4.1.2 </span>
+
+                            <span class="badge bg-light text-dark"> ACT </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-reference-numbers-3</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;input class&#x3D;&quot;p-inputtext p-component p-filled&quot; id&#x3D;&quot;order-detail_0-reference-numbers-3&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                                                <li>  Form element does not have an explicit &lt;label&gt;</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element has no placeholder attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-ship-without-contact &gt; .p-hidden-accessible &gt; input[type&#x3D;&quot;checkbox&quot;][role&#x3D;&quot;switch&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;input type&#x3D;&quot;checkbox&quot; role&#x3D;&quot;switch&quot; class&#x3D;&quot;&quot; aria-checked&#x3D;&quot;false&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                                                <li>  Form element does not have an explicit &lt;label&gt;</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element has no placeholder attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">#order-detail_0-customer-routed &gt; .p-hidden-accessible &gt; input[type&#x3D;&quot;checkbox&quot;][role&#x3D;&quot;switch&quot;]</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;input type&#x3D;&quot;checkbox&quot; role&#x3D;&quot;switch&quot; class&#x3D;&quot;&quot; aria-checked&#x3D;&quot;false&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                                                <li>  Form element does not have an explicit &lt;label&gt;</li>
+                                                <li>  aria-label attribute does not exist or is empty</li>
+                                                <li>  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty</li>
+                                                <li>  Element has no title attribute</li>
+                                                <li>  Element has no placeholder attribute</li>
+                                                <li>  Element&#39;s default semantics were not overridden with role&#x3D;&quot;none&quot; or role&#x3D;&quot;presentation&quot;</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionPasses">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#passes"
+                                aria-expanded="false"
+                                aria-controls="passes"
+                            >
+                                axe returned 52 passed axe
+                                checks. Expand details on
+                                click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="passes"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionPasses"
+                    >
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 40%">Description</th>
+                                        <th style="width: 5%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                        <th style="width: 5%">Nodes passed check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Elements must only use supported ARIA attributes</td>
+                                        <td>aria-allowed-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>62</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>ARIA role should be appropriate for the element</td>
+                                        <td>aria-allowed-role</td>
+                                        <td>Best practice</td>
+                                        <td>74</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>ARIA attributes must be used as specified for the element&#39;s role</td>
+                                        <td>aria-conditional-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>62</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Deprecated ARIA roles must not be used</td>
+                                        <td>aria-deprecated-role</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>52</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>aria-hidden&#x3D;&quot;true&quot; must not be present on the document body</td>
+                                        <td>aria-hidden-body</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>ARIA hidden element must not be focusable or contain focusable elements</td>
+                                        <td>aria-hidden-focus</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>26</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>ARIA input fields must have an accessible name</td>
+                                        <td>aria-input-field-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>Elements must only use permitted ARIA attributes</td>
+                                        <td>aria-prohibited-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>60</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Required ARIA attributes must be provided</td>
+                                        <td>aria-required-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>52</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Certain ARIA roles must contain particular children</td>
+                                        <td>aria-required-children</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>Certain ARIA roles must be contained by particular parents</td>
+                                        <td>aria-required-parent</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>38</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>ARIA roles used must conform to valid values</td>
+                                        <td>aria-roles</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>52</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>ARIA attributes must conform to valid values</td>
+                                        <td>aria-valid-attr-value</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>62</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>ARIA attributes must conform to valid names</td>
+                                        <td>aria-valid-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>57</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>autocomplete attribute must be used correctly</td>
+                                        <td>autocomplete-valid</td>
+                                        <td>WCAG 2.1 Level AA, WCAG 1.3.5</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>Inline text spacing must be adjustable with custom stylesheets</td>
+                                        <td>avoid-inline-spacing</td>
+                                        <td>WCAG 2.1 Level AA, WCAG 1.4.1.2</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>Buttons must have discernible text</td>
+                                        <td>button-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>45</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>Page must have means to bypass repeated blocks</td>
+                                        <td>bypass</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                                        <td>color-contrast</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                                        <td>104</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>Documents must have &lt;title&gt; element to aid in navigation</td>
+                                        <td>document-title</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td>IDs used in ARIA and labels must be unique</td>
+                                        <td>duplicate-id-aria</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>24</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td>Headings should not be empty</td>
+                                        <td>empty-heading</td>
+                                        <td>Best practice</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">23</th>
+                                        <td>Table header text should not be empty</td>
+                                        <td>empty-table-header</td>
+                                        <td>Best practice</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">24</th>
+                                        <td>Form field must not have multiple label elements</td>
+                                        <td>form-field-multiple-labels</td>
+                                        <td>WCAG 2 Level A, WCAG 3.3.2</td>
+                                        <td>8</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">25</th>
+                                        <td>Heading levels should only increase by one</td>
+                                        <td>heading-order</td>
+                                        <td>Best practice</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">26</th>
+                                        <td>&lt;html&gt; element must have a lang attribute</td>
+                                        <td>html-has-lang</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">27</th>
+                                        <td>&lt;html&gt; element must have a valid value for the lang attribute</td>
+                                        <td>html-lang-valid</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">28</th>
+                                        <td>Images must have alternate text</td>
+                                        <td>image-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">29</th>
+                                        <td>Alternative text of images should not be repeated as text</td>
+                                        <td>image-redundant-alt</td>
+                                        <td>Best practice</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">30</th>
+                                        <td>Form elements should have a visible label</td>
+                                        <td>label-title-only</td>
+                                        <td>Best practice</td>
+                                        <td>8</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">31</th>
+                                        <td>Form elements must have labels</td>
+                                        <td>label</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">32</th>
+                                        <td>Banner landmark should not be contained in another landmark</td>
+                                        <td>landmark-banner-is-top-level</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">33</th>
+                                        <td>Aside should not be contained in another landmark</td>
+                                        <td>landmark-complementary-is-top-level</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">34</th>
+                                        <td>Main landmark should not be contained in another landmark</td>
+                                        <td>landmark-main-is-top-level</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">35</th>
+                                        <td>Document should not have more than one banner landmark</td>
+                                        <td>landmark-no-duplicate-banner</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">36</th>
+                                        <td>Document should not have more than one main landmark</td>
+                                        <td>landmark-no-duplicate-main</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">37</th>
+                                        <td>Document should have one main landmark</td>
+                                        <td>landmark-one-main</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">38</th>
+                                        <td>Ensures landmarks are unique</td>
+                                        <td>landmark-unique</td>
+                                        <td>Best practice</td>
+                                        <td>17</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">39</th>
+                                        <td>Links must have discernible text</td>
+                                        <td>link-name</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.4, WCAG 4.1.2</td>
+                                        <td>11</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">40</th>
+                                        <td>&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</td>
+                                        <td>list</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">41</th>
+                                        <td>&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;</td>
+                                        <td>listitem</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>9</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">42</th>
+                                        <td>Users should be able to zoom and scale the text up to 500%</td>
+                                        <td>meta-viewport-large</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">43</th>
+                                        <td>Zooming and scaling must not be disabled</td>
+                                        <td>meta-viewport</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.4</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">44</th>
+                                        <td>Interactive controls must not be nested</td>
+                                        <td>nested-interactive</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>53</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">45</th>
+                                        <td>Page should contain a level-one heading</td>
+                                        <td>page-has-heading-one</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">46</th>
+                                        <td>Ensure elements marked as presentational are consistently ignored</td>
+                                        <td>presentation-role-conflict</td>
+                                        <td>Best practice</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">47</th>
+                                        <td>All page content should be contained by landmarks</td>
+                                        <td>region</td>
+                                        <td>Best practice</td>
+                                        <td>626</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">48</th>
+                                        <td>Scrollable region must have keyboard access</td>
+                                        <td>scrollable-region-focusable</td>
+                                        <td>WCAG 2 Level A, WCAG 2.1.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">49</th>
+                                        <td>Elements should not have tabindex greater than zero</td>
+                                        <td>tabindex</td>
+                                        <td>Best practice</td>
+                                        <td>27</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">50</th>
+                                        <td>tables should not have the same summary and caption</td>
+                                        <td>table-duplicate-name</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">51</th>
+                                        <td>Table cells that use the headers attribute must only refer to cells in the same table</td>
+                                        <td>td-headers-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">52</th>
+                                        <td>Table headers in a data table must refer to data cells</td>
+                                        <td>th-has-data-cells</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionIncomplete">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#incomplete"
+                                aria-expanded="false"
+                                aria-controls="incomplete"
+                            >
+                                axe returned 3 incomplete checks. Expand
+                                details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="incomplete"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionIncomplete"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'incomplete' axe checks means?</em></p>
+                            <p>
+                                Incomplete results were aborted and require further testing. This
+                                can happen either because of technical restrictions to what the rule
+                                can test, or because a javascript error occurred.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                        <th style="width: 10%">Nodes with incomplete check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>ARIA input fields must have an accessible name</td>
+                                        <td>aria-input-field-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Elements must only use permitted ARIA attributes</td>
+                                        <td>aria-prohibited-attr</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                                        <td>color-contrast</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="accordionInapplicable">
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#inapplicable"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
+                            >
+                                axe returned 36 inapplicable checks.
+                                Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="inapplicable"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionInapplicable"
+                    >
+                        <div class="card-body">
+                            <p><em>What 'inapplicable' axe checks means?</em></p>
+                            <p>
+                                The inapplicable array lists all the rules for which no matching
+                                elements were found on the page.
+                            </p>
+                            <p>
+                                <a
+                                    href="https://www.deque.com/axe/core-documentation/api-documentation/#results-object"
+                                    >Visit axe API Documentation</a
+                                >
+                                to learn more.
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>accesskey attribute value should be unique</td>
+                                        <td>accesskeys</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Active &lt;area&gt; elements must have alternate text</td>
+                                        <td>area-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.4, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>aria-braille attributes must have a non-braille equivalent</td>
+                                        <td>aria-braille-equivalent</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>ARIA commands must have an accessible name</td>
+                                        <td>aria-command-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>ARIA dialog and alertdialog nodes should have an accessible name</td>
+                                        <td>aria-dialog-name</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>ARIA meter nodes must have an accessible name</td>
+                                        <td>aria-meter-name</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>ARIA progressbar nodes must have an accessible name</td>
+                                        <td>aria-progressbar-name</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>&quot;role&#x3D;text&quot; should have no focusable descendants</td>
+                                        <td>aria-text</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>ARIA toggle fields must have an accessible name</td>
+                                        <td>aria-toggle-field-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>ARIA tooltip nodes must have an accessible name</td>
+                                        <td>aria-tooltip-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>ARIA treeitem nodes should have an accessible name</td>
+                                        <td>aria-treeitem-name</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>&lt;blink&gt; elements are deprecated and must not be used</td>
+                                        <td>blink</td>
+                                        <td>WCAG 2 Level A, WCAG 2.2.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</td>
+                                        <td>definition-list</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</td>
+                                        <td>dlitem</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>Frames with focusable content must not have tabindex&#x3D;-1</td>
+                                        <td>frame-focusable-content</td>
+                                        <td>WCAG 2 Level A, WCAG 2.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>Frames should be tested with axe-core</td>
+                                        <td>frame-tested</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>Frames must have a unique title attribute</td>
+                                        <td>frame-title-unique</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>Frames must have an accessible name</td>
+                                        <td>frame-title</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>HTML elements with lang and xml:lang must have the same base language</td>
+                                        <td>html-xml-lang-mismatch</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>Input buttons must have discernible text</td>
+                                        <td>input-button-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td>Image buttons must have alternate text</td>
+                                        <td>input-image-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td>Contentinfo landmark should not be contained in another landmark</td>
+                                        <td>landmark-contentinfo-is-top-level</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">23</th>
+                                        <td>Document should not have more than one contentinfo landmark</td>
+                                        <td>landmark-no-duplicate-contentinfo</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">24</th>
+                                        <td>Links must be distinguishable without relying on color</td>
+                                        <td>link-in-text-block</td>
+                                        <td>WCAG 2 Level A, WCAG 1.4.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">25</th>
+                                        <td>&lt;marquee&gt; elements are deprecated and must not be used</td>
+                                        <td>marquee</td>
+                                        <td>WCAG 2 Level A, WCAG 2.2.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">26</th>
+                                        <td>Delayed refresh under 20 hours must not be used</td>
+                                        <td>meta-refresh</td>
+                                        <td>WCAG 2 Level A, WCAG 2.2.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">27</th>
+                                        <td>&lt;object&gt; elements must have alternate text</td>
+                                        <td>object-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">28</th>
+                                        <td>[role&#x3D;&quot;img&quot;] elements must have an alternative text</td>
+                                        <td>role-img-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">29</th>
+                                        <td>scope attribute should be used correctly</td>
+                                        <td>scope-attr-valid</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">30</th>
+                                        <td>Select element must have an accessible name</td>
+                                        <td>select-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">31</th>
+                                        <td>Server-side image maps must not be used</td>
+                                        <td>server-side-image-map</td>
+                                        <td>WCAG 2 Level A, WCAG 2.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">32</th>
+                                        <td>The skip-link target should exist and be focusable</td>
+                                        <td>skip-link</td>
+                                        <td>Best practice</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">33</th>
+                                        <td>&lt;svg&gt; elements with an img role must have an alternative text</td>
+                                        <td>svg-img-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">34</th>
+                                        <td>lang attribute must have a valid value</td>
+                                        <td>valid-lang</td>
+                                        <td>WCAG 2 Level AA, WCAG 3.1.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">35</th>
+                                        <td>&lt;video&gt; elements must have captions</td>
+                                        <td>video-caption</td>
+                                        <td>WCAG 2 Level A, WCAG 1.2.2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">36</th>
+                                        <td>&lt;video&gt; or &lt;audio&gt; elements must not play automatically</td>
+                                        <td>no-autoplay-audio</td>
+                                        <td>WCAG 2 Level A, WCAG 1.4.2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rulesSection">
+                <div class="card">
+                    <div class="card-header" id="ruleSection">
+                        <h5 class="mb-0">
+                            <button
+                                class="btn btn-link"
+                                data-toggle="collapse"
+                                data-target="#rules"
+                                aria-expanded="false"
+                                aria-controls="inapplicable"
+                            >
+                                axe was running with 0 rules. Expand details on click
+                            </button>
+                        </h5>
+                    </div>
+                    <div
+                        id="rules"
+                        class="collapse"
+                        aria-labelledby="ruleSection"
+                        data-parent="#rules"
+                    >
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>

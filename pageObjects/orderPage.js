@@ -130,18 +130,18 @@ class OrderPage{
     async createOrder(){
         await this.newOrderBtn.click();
         await this.originLocName.fill(originLocation["locName"]);
-        await global.page.waitForTimeout(1000);
+        await global.page.waitForTimeout( parseInt(process.env.small_wait));
         await this.originAddLine1.fill(originLocation["addressLine1"]);
         await global.page.keyboard.press('Enter');
         await this.AddLine1Drop.click();
         await this.destLocName.fill(destination["locName"]);
-        await global.page.waitForTimeout(1000);
+        await global.page.waitForTimeout(parseInt(process.env.small_wait));
         await this.destAddLine1.fill(destination["addressLine1"])
         await global.page.keyboard.press('Enter');
         await this.AddLine1Drop.click();
         await expect(this.pickupDate).toBeVisible()
         await this.pickupDate.click();
-        await global.page.waitForTimeout(1000);
+        await global.page.waitForTimeout(parseInt(process.env.small_wait));
         await expect(this.selectDate).toBeVisible();
         await this.selectDate.click();
         await this.billAddressBook.click();
@@ -153,15 +153,15 @@ class OrderPage{
         await this.freightClassDrop.click();
         await this.selectClass.click();
         await this.getSelectDirection.click();
-        await global.page.waitForTimeout(1000);
+        await global.page.waitForTimeout(parseInt(process.env.small_wait));
         await expect(this.selectDirection).toBeVisible();
         await this.selectDirection.click();
         await this.getBillingTerms.click();
-        await global.page.waitForTimeout(1000);
+        await global.page.waitForTimeout(parseInt(process.env.small_wait));
         await expect(this.selectBillingTerms).toBeVisible()
         await this.selectBillingTerms.click();
         await this.getRefNumType.click();
-        await global.page.waitForTimeout(2000);
+        await global.page.waitForTimeout(parseInt(process.env.small_wait));
         await expect(this.selectRefNumType).toBeVisible()
         await this.selectRefNumType.click();
         await this.inputRefNumVal.fill(basicInformation["referenceNumValue"]);

@@ -3,10 +3,10 @@ name: Playwright Tests
 on:
   push:
     branches:
-      - main  # Adjust to your main branch name
+      - main  
   pull_request:
     branches:
-      - main  # Adjust to your main branch name
+      - main  
   workflow_dispatch:
 jobs:
   UI_Test:
@@ -96,7 +96,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Perforamance_Report
-          path: reports
+          path: reports/summary.html
   generate:
     needs: [UI_Test]
     if: always()
