@@ -2,9 +2,6 @@ const reporter = require('cucumber-html-reporter');
  
 (async () => {
   try {
-    const openModule = await import('open');
-    const open = openModule.default;
- 
     const options = {
       jsonFile: 'reports/json/',
       launchReport: false,
@@ -17,7 +14,6 @@ const reporter = require('cucumber-html-reporter');
       theme: 'bootstrap',
     };
  
-    // Generate HTML report
     reporter.generate(options);
   } catch (error) {
     console.error('Error occurred:', error);
