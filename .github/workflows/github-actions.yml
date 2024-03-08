@@ -125,5 +125,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Cucumber-Report
-          path: reports
+          path: reports/cucumber-report.html
  
