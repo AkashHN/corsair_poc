@@ -7,7 +7,7 @@
         "ui_test": "npx cucumber-js  features/corsir.feature --require  ./steps/order.step.js -f json:reports/json/cucumber_report.json",
         "a11y_test": "npx cucumber-js features/accessibility.feature --require ./steps/accessibility.step.js",
         "k6_test":"k6 run utility/performance_test.mjs",
-        "generate_report":"node cucumber.report.js"
+        "genarate_report":"node cucumber.report.js"
     },
     "keywords": [],
     "author": "",
