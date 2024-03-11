@@ -95,7 +95,7 @@ jobs:
         if: always()
         uses: actions/upload-pages-artifact@v3
         with:
-          name: Perforamance_Report
+          name: github-pages
           path: reports
   generate_ui_report:
     needs: [UI_Test]
@@ -124,7 +124,7 @@ jobs:
         if: always()
         uses: actions/upload-pages-artifact@v3
         with:
-          name: Cucumber-Report
+          name: github-pages
           path: reports/ui
   deploy_ui_report:
     # Add a dependency to the build job
@@ -137,7 +137,7 @@ jobs:
  
     # Deploy to the github-pages environment
     environment:
-      name: Cucumber-Report
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
  
     # Specify runner + deployment step
@@ -157,7 +157,7 @@ jobs:
  
     # Deploy to the github-pages environment
     environment:
-      name: Perforamance_Report
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
  
     # Specify runner + deployment step
