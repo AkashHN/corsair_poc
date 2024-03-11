@@ -141,6 +141,7 @@ jobs:
             path: reports/index
 
   deploy_report:
+    if: always()
     # Add a dependency to the build job
     needs: [upload_index_page]
  
