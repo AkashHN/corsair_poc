@@ -130,12 +130,13 @@ jobs:
     needs: [k6_Test,generate_ui_report]
     if: always()
     runs-on: ubuntu-latest
-    - name: Final Report
-        if: always()
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: github-pages
-          path: index.html
+    steps:
+      - name: Final Report
+          if: always()
+          uses: actions/upload-pages-artifact@v3
+          with:
+            name: github-pages
+            path: reports/index
 
   deploy_report:
     # Add a dependency to the build job
