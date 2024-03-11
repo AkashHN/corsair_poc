@@ -128,7 +128,7 @@ jobs:
           name: cucumber-report
           path: reports/ui
   upload_index_page:
-    needs: [k6_Test,generate_ui_report]
+    needs: [k6_Test,generate_ui_report,A11y_Test]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -143,6 +143,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: cucumber-report
+          path: ./reporter
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Accesbility_Report
           path: ./reporter
       
       - name: Final Report
