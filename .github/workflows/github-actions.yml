@@ -93,7 +93,7 @@ jobs:
          
       - name: Upload Artifacts
         if: always()
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: performance-report
           path: reports
@@ -122,7 +122,7 @@ jobs:
           npm run genarate_report
       - name: Ui Report
         if: always()
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cucumber-report
           path: reports/ui
@@ -131,6 +131,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: git chechout
+        uses: actions/checkout@v4
       - name: Final Report
         if: always()
         uses: actions/upload-pages-artifact@v3
