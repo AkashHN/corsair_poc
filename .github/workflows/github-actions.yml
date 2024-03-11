@@ -120,7 +120,7 @@ jobs:
           mkdir reports/json
           mv -v report/*.json ./reports/json/cucumber_report.json
           npm run genarate_report
-      - name: Final Report
+      - name: Ui Report
         if: always()
         uses: actions/upload-pages-artifact@v3
         with:
@@ -132,9 +132,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Final Report
-          if: always()
-          uses: actions/upload-pages-artifact@v3
-          with:
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
             name: github-pages
             path: reports/index
 
