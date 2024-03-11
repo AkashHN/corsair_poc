@@ -7,7 +7,7 @@ const reporter = require('cucumber-html-reporter');
       launchReport: false,
       noInlineScreenshots: false,
       screenshotsDirectory:"reports/screenshots/",
-      output: 'reports/ui/index.html',
+      output: 'reports/ui/cucumber.html',
       reportSuiteAsScenarios: true,
       scenarioTimestamp: true,
       storeScreenshots: true,
