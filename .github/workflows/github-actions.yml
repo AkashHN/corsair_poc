@@ -97,7 +97,6 @@ jobs:
         with:
           name: performance-report
           path: |
-            reports
             reports/index
   generate_ui_report:
     needs: [UI_Test]

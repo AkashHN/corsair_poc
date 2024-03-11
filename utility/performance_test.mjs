@@ -26,6 +26,6 @@ export default async function performanceTest() {
 }
 export function handleSummary(data) {
   return {
-    "reports/performance.html": htmlReport(data),
+    "reports/index/performance.html": htmlReport(data),
   };
 }
