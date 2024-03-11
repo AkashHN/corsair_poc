@@ -4,9 +4,6 @@
             "steps/*.js",
             "page/*.js",
             "utility/*.js"
-        ],
-        "format": [
-            "html:reports/cucumber-report.html"
-           ]
+        ]
     }
 }
