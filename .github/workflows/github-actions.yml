@@ -96,7 +96,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: Perforamance_Report
-          path: reports/index.html
+          path: reports
   generate_ui_report:
     needs: [UI_Test]
     if: always()
@@ -125,7 +125,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: Cucumber-Report
-          path: reports/ui/index.html
+          path: reports/ui
   deploy_ui_report:
     # Add a dependency to the build job
     needs: [generate_ui_report]
