@@ -93,7 +93,7 @@ jobs:
          
       - name: Upload Artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           name: performance-report
           path: reports
@@ -122,7 +122,7 @@ jobs:
           npm run genarate_report
       - name: Ui Report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           name: cucumber-report
           path: reports/ui
