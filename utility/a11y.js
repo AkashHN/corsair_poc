@@ -4,6 +4,7 @@ const { test, expect } = require('@playwright/test');
 require('dotenv').config();
 
 async function runAccessibilityTests(pageName) {
+  try{
     const url = await global.page.url();
     let page = await global.context.newPage();
     console.log(url, "<<<<<<<<<<<<<<<<<<<<<<<");
@@ -23,8 +24,12 @@ async function runAccessibilityTests(pageName) {
         outputDir:"reports/a11y/"
       },
     });
-    let page1 =page
-    page1.close();
+    expect(accessibilityScanResults.violations.length).toBe(0);
+  }
+    finally{
+      let page1 =page
+      page1.close();
+    }
 };
 
 module.exports = runAccessibilityTests;
