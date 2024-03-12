@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report</title>
+<style>
+    body {
+        background-image: url('../../assets/figi.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80vh; /* Ensures the background covers the entire viewport height */
+        margin: 0; /* Removes default margin */
+        padding: 20px; /* Adds padding inside the body */
+        
+    }
+    .logo {
+        width: 100px; /* Adjust the width as needed */
+        height: auto; /* Maintains aspect ratio */
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    .btn {
+        margin-top: 20px; /* Adds space between buttons */
+        padding: 10px 20px;
+        font-size: 16px;
+        width: 4rem;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #ff7f50; /* Light orange shade */
+        color: #fff;
+        border: none; /* Remove button border */
+    }
+    .btn:hover {
+        background-color: #ffa07a; /* Darker shade on hover */
+    }
+    .heading{
+        width: 100%;
+        height: 5rem;
+        padding: 3rem 0rem;
+        margin: 0%;
+    }
+    .content{
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        padding: 0px;
+    }
+    a{
+        margin: 1rem 0.5rem ;
+    }
+  
+
+</style>
 </head>
 <body>
-    <a href="./cucumber.html">UI</a>
-    <a href="./performance.html">K6</a>
-    <a href="./a11y_order-details_page.html">a11y</a>
+        <img src="../../assets/Feuji-new-logo.jpg" alt="Company Logo" class="logo">
+<div class="heading">
+    <h1  style="text-align: center;font-size:36px;">Report Gateway</h1>
+</div>
+    
+    <div class="content">
+        <a href="./cucumber.html" class="btn">UI</a>
+        <a href="./performance.html" class="btn">K6</a>
+        <a href="./a11y_order-details_page.html" class="btn">A11y</a>
+    </div>
+    <!-- Rest of your content goes here -->
 </body>
 </html>
+
