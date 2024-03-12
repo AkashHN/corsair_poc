@@ -71,6 +71,12 @@ jobs:
         with:
           name: Accesbility_Report
           path: reports/a11y
+      - name: Upload Assets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Assets
+          path: assets        
   k6_Test:
     if: always()
     runs-on: ubuntu-latest
@@ -148,6 +154,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: Accesbility_Report
+          path: ./reporter
+      - name: download aasets
+        uses: actions/download-artifact@v4
+        with:
+          name: Assets
           path: ./reporter
       
       - name: Final Report
