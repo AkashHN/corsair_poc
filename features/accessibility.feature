@@ -9,4 +9,4 @@ Feature: Accessibility Test
         Then I am Adding the Quote Details for a11y_test
         Examples:
             | u_name          | u_password   |
-            | Wolfie          | **********   | 
+            | ******          | **********   | 

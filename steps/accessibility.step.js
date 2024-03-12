@@ -5,6 +5,7 @@ const OrderPage =require('../pageObjects/orderPage')
 const OrderDetailsPage =require('../pageObjects/orderDetailsPage')
 require('dotenv').config();
 const runAccessibilityTests = require('../utility/a11y');
+const atob = require('atob')
 
 const loginPage = LogInPage;
 const homePage = HomePage;
@@ -16,7 +17,7 @@ Given(/^I am on the Corsair Login page for a11y_test$/,async () => {
 });
 
 When(/^I am Logging into Corsair application with the for a11y_test$/,async () => {
-	await loginPage.loginUser(process.env.user_name,process.env.pass_word);
+	await loginPage.loginUser(atob(process.env.user_name), atob(process.env.pass_word));
 });
 
 Then(/^I am Selecting the Domain for a11y_test$/, async() => {

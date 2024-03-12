@@ -1,31 +1,32 @@
 {
   "name": "playwright-bdd",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "ui_test": "npx cucumber-js  features/corsir.feature --require  ./steps/order.step.js -f json:reports/json/cucumber_report.json",
-        "a11y_test": "npx cucumber-js features/accessibility.feature --require ./steps/accessibility.step.js",
-        "k6_test":"k6 run utility/performance_test.mjs",
-        "genarate_report":"node reports/index.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "k6-html-reporter": "^1.0.5",
-      "@cucumber/cucumber": "^10.0.0",
-      "@axe-core/playwright": "^4.8.5",
-      "@cucumber/pretty-formatter": "^1.0.0",
-      "@playwright/test": "^1.42.1",
-      "cucumber-html-reporter": "^7.1.1",
-      "@types/node": "^20.11.24",
-      "playwright": "^1.42.1"
-    },
-    "dependencies": {
-      "dotenv": "^16.4.5",
-      "fs": "^0.0.1-security",
-      "json": "^11.0.0",
-      "axe-html-reporter": "^2.2.3"
-    }
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ui_test": "npx cucumber-js  features/corsir.feature --require  ./steps/order.step.js -f json:reports/json/cucumber_report.json",
+    "a11y_test": "npx cucumber-js features/accessibility.feature --require ./steps/accessibility.step.js",
+    "k6_test": "k6 run utility/performance_test.mjs",
+    "genarate_report": "node reports/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.5",
+    "@cucumber/cucumber": "^10.0.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.24",
+    "cucumber-html-reporter": "^7.1.1",
+    "k6-html-reporter": "^1.0.5",
+    "playwright": "^1.42.1"
+  },
+  "dependencies": {
+    "atob": "^2.1.2",
+    "axe-html-reporter": "^2.2.3",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "json": "^11.0.0"
+  }
 }

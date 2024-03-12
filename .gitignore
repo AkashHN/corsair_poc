@@ -7,3 +7,6 @@ cucumber-report.html
 cucumber_report.json
 failureScreenShots/
 artifacts/
+/reports/a11y/
+reports/ui/
+reports/json/

@@ -1,6 +1,6 @@
 const {expect} = require('@playwright/test');
 require('dotenv').config();
-const runAccessibilityTests = require('../utility/a11y');
+const atob = require('atob')
 
 class LogInPage{
     get userNameInput(){
@@ -20,8 +20,7 @@ class LogInPage{
     }  
 
     async openApplication() {
-        console.log(process.env.BASE_URL, "https://qa.rygen.com/corsair/");
-        await global.page.goto(process.env.BASE_URL);
+        await global.page.goto(atob(process.env.BASE_URL));
     }
     
     async loginUser(userName, password){

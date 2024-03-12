@@ -12,7 +12,7 @@ Feature: Order Feature
         Then I am Clicking Add Delivery Button 
         Examples:
             | u_name          | u_password   |
-            | Wolfie          | **********   | 
+            | ******          | **********   | 
 
     Scenario: Creating a negative Test Failed Scenerio
         # Given I am on the Corsair Login page
@@ -21,6 +21,6 @@ Feature: Order Feature
         Then I am Creating the New Order
         Examples:
             | u_name          | u_password   |
-            | Wolfie          | **********   | 
+            | ******          | **********   | 
 
 
